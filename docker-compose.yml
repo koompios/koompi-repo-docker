@@ -1,0 +1,10 @@
+version: '3'
+
+services: 
+  fdroid-repo:
+    build: .
+    restart: always
+    ports:
+    - '873:8873'
+    volumes:
+    - './testing/:/fdroid-mirror/repo/'
