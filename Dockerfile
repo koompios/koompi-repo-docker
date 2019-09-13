@@ -5,11 +5,8 @@ MAINTAINER hongsea119@gmail.com
 ENV LANG=C.UTF-8 \
     DEBIAN_FRONTEND=noninteractive
 
-RUN mkdir -p /fdroid-mirror \
-        && chmod a+rw /fdroid-mirror \
-        && echo "fdroid-mirror:dont-abuse-me-please" > /etc/rsyncd.secrets \
-        && chgrp nogroup /etc/rsyncd.secrets \
-        && chmod 0440 /etc/rsyncd.secrets
+RUN mkdir -p /pionux-mirror \
+        && chmod a+rw /fdroid-mirror
 
 RUN printf "path-exclude=/usr/share/locale/*\npath-exclude=/usr/share/man/*\npath-exclude=/usr/share/doc/*\npath-include=/usr/share/doc/*/copyright\n" >/etc/dpkg/dpkg.cfg.d/01_nodoc \
 	&& mkdir -p /usr/share/man/man1 \
