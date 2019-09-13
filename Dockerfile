@@ -6,7 +6,7 @@ ENV LANG=C.UTF-8 \
     DEBIAN_FRONTEND=noninteractive
 
 RUN mkdir -p /pionux-mirror \
-        && chmod a+rw /fdroid-mirror
+        && chmod a+rw /pionux-mirror
 
 RUN printf "path-exclude=/usr/share/locale/*\npath-exclude=/usr/share/man/*\npath-exclude=/usr/share/doc/*\npath-include=/usr/share/doc/*/copyright\n" >/etc/dpkg/dpkg.cfg.d/01_nodoc \
 	&& mkdir -p /usr/share/man/man1 \
