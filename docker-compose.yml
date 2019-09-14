@@ -10,10 +10,10 @@ services:
     - '/mnt/volume_pionux_repo/pionux-repo/repo:/home/repo'
     - '/mnt/volume_pionux_repo/pionux-repo/pionux-repo-docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
 
-  # fdroid-repo:
-  #   image: hongsea/pionux-repo-docker:latest
-  #   restart: always
-  #   ports:
-  #   - '873:8873'
-  #   volumes:
-  #   - './repo/:/pionux-mirror/repo/'
+  pionux-repo:
+    image: hongsea/pionux-repo-docker:latest
+    restart: always
+    ports:
+    - '873:8873'
+    volumes:
+    - '/mnt/volume_pionux_repo/pionux-repo/repo:/pionux-mirror/repo/'
