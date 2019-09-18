@@ -9,7 +9,6 @@ services:
     volumes:
     - '/mnt/volume_pionux_repo/pionux-repo/repo:/home/repo'
     - '/mnt/volume_pionux_repo/pionux-repo/pionux-repo-docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
-    - '/var/run/rsync.log:/var/run/rsync.log'
 
   pionux-repo:
     image: hongsea/pionux-repo-docker:latest
@@ -18,3 +17,4 @@ services:
     - '873:8873'
     volumes:
     - '/mnt/volume_pionux_repo/pionux-repo/repo:/pionux-mirror/repo/'
+    - '/var/run/rsync.log:/var/run/rsync.log'
