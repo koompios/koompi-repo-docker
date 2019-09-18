@@ -17,3 +17,4 @@ services:
     - '872:8873'
     volumes:
     - '/mnt/volume_pionux_repo/pionux-repo/repo:/pionux-mirror/repo/'
+    - '/var/run/rsync.log:/var/run/rsync.log'
