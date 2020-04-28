@@ -2,23 +2,9 @@ version: '3'
 services:
 
   repo:
-    image: nginx:1.17
+    image: koompirepo
     ports:
     - "8081:80"
     restart: always
     volumes:
-    - '/mnt/volume_pionux_repo/pionux-repo/fdroid-mirror-docker/repo:/home/repo'
-    - '/mnt/volume_pionux_repo/pionux-repo/fdroid-mirror-docker/nginx/nginx.conf:/etc/nginx/nginx.conf'
-
-  pionux-repo:
-    image: pionux/pionux-repo-docker:1.0 
-    restart: always
-    ports:
-    - '872:8873'
-    volumes:
-    - '/mnt/volume_pionux_repo/pionux-repo/repo:/pionux-mirror/repo/'
-<<<<<<< HEAD
-    - '/var/run/rsync.log:/var/run/rsync.log' 
-=======
-    - '/var/run/rsync.log:/var/run/rsync.log'
->>>>>>> e41e971d797a753f0d9843c8afb4cf01e027d776
+    - '~/project/koompi-repo/repo:/repo'
